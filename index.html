@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="nav.css" />
+<style>
+html,
+body {
+  min-height: 100vh;
+}
+
+.head_img {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.popup {
+  max-width: 90%;
+  max-height: 90%;
+  display: none;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  position: absolute;
+  background-color: rgb(55,55,55);
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.popup button {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  margin-right: 20px;
+  margin-top: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  padding: 3px 10px;
+  color:#bbb;
+  cursor: pointer;
+  background-color: rgba(240, 248, 255, 0.5);
+  border: none;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+  transition: background-color .2s;
+  -webkit-transition: background-color .2s;
+  -moz-transition: background-color .2s;
+  -ms-transition: background-color .2s;
+  -o-transition: background-color .2s;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.popup img {
+  position: relative;
+  width: 80%;
+  height: 50%;
+  margin: 20px;
+}
+
+
+.programmes a{
+    color: black;
+    font-size: medium;
+}
+.vid_container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 80%;
+  height: 80%;
+}
+</style>
+  </head>
+  <body>
+    <img src="header.png" />
+    <br />
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ml.html">Machine Learning</a></li>
+        <li><a href="ds.html">Data Science</a></li>
+        <li><a href="lab.html">Lab</a></li>
+      </ul>
+    </nav>
+    <img class="head_img" src="https://science.osti.gov/-/media/Initiatives/images/ai_banner.jpg?h=320&w=905&la=en&hash=8F62F5794F19B008A2812A1C2B4421B59252ED230302C24709FDDDDA3453A5D1" />
+    <br />
+    <div id="popup" class="popup">
+      <button onclick="close_ad()">&times;</button>
+      <img src="https://pmsss.in/?qa=blob&qa_blobid=5292646330799117992" />
+    </div>
+    <h2>Head of Department</h2>
+    <p>
+      <b>Dr.C.S.Kanimozhi selvi w.e.f 04.05.2022) </b>
+    </p>
+    <h2>Programmes offered</h2>
+    <div class="programmes">
+      <ol>
+        <li>
+          <a href="ml.html">Artificial Intelligence and Machine Learning</a
+          ><br />
+        </li>
+        <li>
+          <a href="ds.html">Artificial Intelligence and Data Science</a>
+        </li>
+      </ol>
+    </div>
+    <h2>Video info</h2>
+    <div class="vid_container">
+    <iframe class="video" src="https://youtube.com/embed/ad79nYk2keg"></iframe>
+      </div>
+    <script src="script.js"></script>
+  </body>
+</html>
